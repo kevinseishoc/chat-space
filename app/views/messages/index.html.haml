@@ -8,29 +8,29 @@
       .chat-main
         .main-header
           .main-header__left-box
-            %h2{ :class => 'main-header__left-box__current-group', :data-group_id =>'2033'} 
+            %h2{ class:'main-header__left-box__current-group', data:{group_id:'2033'}} 
               twice
             %ul.main-header__left-box__member-list 
               Member：
               %li.main-header__left-box__member-list__member test
-          %a{ href:"/groups/2033/edit"}
+          %a{ href:'/groups/2033/edit'}
             .main-header__edit-btn Edit
         .messages
-          %div{ :class => 'message', :data-message_id => '5440'}
+          %div{ class:'message', data:{message_id:'5440'}}
             .message__upper-info
               %p.message__upper-info__talker test
               %p.message__upper-info__date 2019/10/02(Wed) 14:16:46
             %p.message__text hello everyone
-          %div{ :class => 'message', :data-message_id => '5441'}
+          %div{ class:'message', data:{message_id:'5441'}}
             .message__upper-info
               %p.message__upper-info__talker test
               %p.message__upper-info__date 2019/10/02(Wed) 14:17:18
             %p.message__text anything ok?          
         .form
-          %form{ :class => 'new_message', :id =>'new_message', :entype=>'multipart/form-data', :action =>'/groups/2033/messages', :accept-charset=>'UTF-8', :method => 'post' }
+          %form{ class:'new_message', id:'new_message', entype:'multipart/form-data', action:'/groups/2033/messages', accept:{charset:'UTF-8'}, method:'post'}
             .input-box
-              %input{ :placeholder => 'type a message', :class =>'input-box__text', :type => 'text', :name => 'message[content]', :id => 'message_content'}
-              %label{ :class => 'input-box__image', :for =>'message_image'}
-                %i{ :class =>'fa fa-image'}
-                %input{ :class =>'input-box__image__file', :type =>'file', :name => 'message[image]', :id=> 'message_image'}
-            %input{ :type => 'submit', :name => 'commit', :value =>'Send', :class =>'submit-btn', :data-disable-with =>'Send'}
+              %input{ placeholder:'type a message', class:'input-box__text', type:'text', name:'message[content]', id:'message_content'}
+              %label{ class:'input-box__image', for:'message_image'}
+                %i{ class:'fa fa-image'}
+                %input{ class:'input-box__image__file', type:'file', name:'message[image]', id:'message_image'}
+            %input{ type:'submit', name:'commit', value:'Send', class:'submit-btn', data:{disable:{with:'Send'}}}
