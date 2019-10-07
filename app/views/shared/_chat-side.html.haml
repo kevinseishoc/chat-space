@@ -4,13 +4,13 @@
       %p.side-header__box__user-name test
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          %a{ href:"/groups/new"}
+          =link_to "/groups/new" do
             %i.fa.fa-edit
         %li.side-header__box__menu__edit-user
-          %a{ href:"/users/1013/edit"}
+          =link_to "/users/1013/edit" do
             %i.fa.fa-cog
   .groups
-    %a{ href:"/groups/2033/messages"}
+    =link_to "/groups/2033/messages" do
       .group
         %p.group__group-name twice
         %p.group__latest-message hello everyone        
