@@ -1,16 +1,20 @@
 .chat-side
   .side-header
     .side-header__box
-      %p.side-header__box__user-name test
+      %p.side-header__box__user-name 
+        = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          =link_to "/groups/new" do
+          = link_to new_group_path do
             %i.fa.fa-edit
         %li.side-header__box__menu__edit-user
-          =link_to "/users/1013/edit" do
+          =link_to edit_user_path(current_user)  do
             %i.fa.fa-cog
   .groups
-    =link_to "/groups/2033/messages" do
+    - current_user.groups.each do |group|
       .group
-        %p.group__group-name twice
-        %p.group__latest-message hello everyone        
+        = link_to group_messages_path(group) do
+          %p.group__group-name
+          = group.name
+          %p.group__latest-message
+          メッセージはまだありません。 
