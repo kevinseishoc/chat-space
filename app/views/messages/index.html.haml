@@ -13,16 +13,7 @@
       =link_to '/groups/2033/edit' do
         .main-header__edit-btn Edit
     .messages
-      %div{ class:'message', data:{message_id:'5440'}}
-        .message__upper-info
-          %p.message__upper-info__talker test
-          %p.message__upper-info__date 2019/10/02(Wed) 14:16:46
-        %p.message__text hello everyone
-      %div{ class:'message', data:{message_id:'5441'}}
-        .message__upper-info
-          %p.message__upper-info__talker test
-          %p.message__upper-info__date 2019/10/02(Wed) 14:17:18
-        %p.message__text anything ok?          
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
