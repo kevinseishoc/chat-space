@@ -90,9 +90,8 @@ a{
         color: #999999;
       }
     }
-    a{
-    color: $light-blue;
-      .main-header__edit-btn{
+      .main-header__edit-btn a {
+        color: $light-blue;
         height: 40px;
         line-height: 40px;
         padding: 0 20px;
@@ -101,8 +100,8 @@ a{
         position: absolute;
         right: 40px;
       }
-    }
   }
+
   .messages{
     height: calc(100vh - 190px);
     padding: 46px 40px;
