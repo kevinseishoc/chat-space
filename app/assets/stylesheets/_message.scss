@@ -90,9 +90,8 @@ a{
         color: #999999;
       }
     }
-    a{
-    color: $light-blue;
-      .main-header__edit-btn{
+      .main-header__edit-btn a {
+        color: $light-blue;
         height: 40px;
         line-height: 40px;
         padding: 0 20px;
@@ -101,8 +100,8 @@ a{
         position: absolute;
         right: 40px;
       }
-    }
   }
+
   .messages{
     height: calc(100vh - 190px);
     padding: 46px 40px;
@@ -110,10 +109,10 @@ a{
     overflow: scroll;
     .message{
       padding-bottom: 40px;
-      &__upper-info{
+      .upper-message{
         display: flex;
         margin-bottom: 10px;
-        &__talker{
+        &__user-name{
           color: $chat-main-text-color;
           font-size: 16px;
           font-weight: bold;
@@ -124,7 +123,7 @@ a{
           margin-left: 10px;
         }
       }
-      &__text{
+      &___content{
         color: $chat-main-text-color;
         font-size: 14px;
         margin-bottom: 10px;
